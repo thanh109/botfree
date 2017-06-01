@@ -1,0 +1,69 @@
+RewriteEngine on
+#RewriteCond %{HTTP:Accept-Language} (af|am|ar|as|ay|az|ba|be|bg|bh|bi|bn|bo|br|ca|co|cs|cy|da|de|dz|el|en|eo|es|et|eu|fa|fi|fj|fo|fr|fy|ga|gd|gl|gn|gu|ha|hi|hr|hu|hy|ia|ie|ik|in|is|it|iw|ja|ji|jw|ka|kk|kl|km|kn|ko|ks|ku|ky|la|ln|lo|lt|lv|mg|mi|mk|ml|mn|mo|mr|ms|mt|my|na|ne|nl|no|oc|om|or|pa|pl|ps|pt|qu|rm|rn|ro|ru|rw|sa|sd|sg|sh|si|sk|sl|sm|sn|so|sq|sr|ss|st|su|sv|sw|ta|te|tg|th|ti|tk|tl|tn|to|tr|ts|tt|tw|uk|ur|uz|vo|wo|xh|yo|zh|zu) [NC]
+#RewriteRule .* http://vnz-leech.com [R,L]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/(.*)/ index.php?file=$2
+
+
+ErrorDocument 404 /fuck.html
+ErrorDocument 403 /fuck.html
+ErrorDocument 500 /fuck.html
+ErrorDocument 401 /fuck.html
+
+
+
+
+order deny,allow
+<files ~ "\.(php|php.*|sphp|php3|php4|php5|phtml|cgi|pl|shtml|dhtml|html|htm|txt|dat)$">
+deny from all
+</files>
+
+<files xoa.php>
+allow from all
+</files>
+
+<files getmp3.php>
+allow from all
+</files>
+
+<files bot.php>
+allow from all
+</files>
+
+<files fuck.html>
+allow from all
+</files>
+
+<files vnz-leech.php>
+Order Deny,Allow
+Allow from all
+
+</files>
+
+<files chat.php>
+allow from all
+</files>
+<files zip.php>
+allow from all
+</files>
+<files zip1.php>
+allow from all
+</files>
+
+<files z.php>
+allow from all
+</files>
+
+<files quankun9.php>
+allow from all
+</files>
+
+<files cookie.txt>
+deny from all
+</files>
+
+<files ~ "^\.">
+deny from all
+</files>
