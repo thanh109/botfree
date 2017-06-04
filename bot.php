@@ -16,7 +16,7 @@ div {
 </html>
 <?php
 if (file_get_contents("time_clean.txt") <= (time() - 1 * 60)) {
-    @file_get_contents("http://hitpro2.cloudapp.net/botfree/xoa.php");
+    @file_get_contents("http://botcoc.cloudapp.net/botfree/xoa.php");
     @file_get_contents("https://huyenthoai.pro/xoa.php");
     @file_put_contents("time_clean.txt", time());
     
