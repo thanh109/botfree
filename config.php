@@ -966,7 +966,7 @@ $limit_post = 4;
 
 ################### Limit 1 link/...min ################
 ### on | off limit 1 link/...mins  ==> set 0 ==> off ###
-$limit_link = 3;
+$limit_link = 5;
 
 ################### Limit filesize/link ################
 ### on | off limit 1 link/...mins  ==> set 0 ==> off ###
@@ -974,7 +974,7 @@ $limit_size = 2;
 
 ################### Limit filesize/link ################
 ### on | off limit 1 link/...mins  ==> set 0 ==> off ###
-$limit_sizevip = 5;
+$limit_sizevip = 4;
 
 ################### Limit 1 song/...min ################
 ### on | off limit 1 song/...mins  ==> set 0 ==> off ###
@@ -1000,7 +1000,6 @@ $randapi = array(
 "https://huyenthoai.pro/zip1.php?shink=",
 "https://huyenthoai.pro/zip1.php?shink="
 //"http://ouo.io/api/63P7NKET?s="
-
 );
 
 
