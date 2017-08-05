@@ -997,8 +997,8 @@ $good_link = 'VNZ.Team';
 ################### ZIP Link ###########################
 $randapi = array(
 //"http://sieuthinet.info/zip1.php?shink=",
-"https://huyenthoai.pro/zip1.php?shink=",
-"https://huyenthoai.pro/zip1.php?shink="
+"http://huyenthoai.pro/zip1.php?shink=",
+"http://huyenthoai.pro/zip1.php?shink="
 //"http://ouo.io/api/63P7NKET?s="
 );
 

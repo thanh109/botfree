@@ -936,21 +936,21 @@ function Get_Link_Host($link, $host, $pass, $size_file, $total_file)
         $atb       = $array_atb[rand(0, count($array_atb) - 1)];
         if ($ziplink == true)
         // $link = shortest($link);
-            $link = file_get_contents("https://huyenthoai.pro/zip.php?shink=" . $link);
+            $link = file_get_contents("http://huyenthoai.pro/zip.php?shink=" . $link);
         ///*  $link = file_get_contents("https://is.gd/create.php?format=simple&url=" . urlencode($link));
         // $link = Googlzip($link);
-        $encode = base64_encode($link);
+      /*   $encode = base64_encode($link);
         if ($encode AND ($ziplink == false)) {
            // $link = "https://huyenthoai.pro/getlink.php?file=" . $encode;
-            $link = "https://huyenthoai.pro/redirect/" . $encode;
+            $link = "http://huyenthoai.pro/redirect/" . $encode;
 			//$link = file_get_contents("http://botfree.itsuck.net/zip.php?shink=" . $link);
 			//$link = file_get_contents($api . urlencode($link));
 			//$link = file_get_contents("http://ouo.io/api/63P7NKET?s=" . $link);
         } else {
-            $link = "https://huyenthoai.pro/redirect/" . $encode;
+            $link = "http://huyenthoai.pro/redirect/" . $encode;
 			$link = file_get_contents($api . urlencode($link));
          //   $link = file_get_contents("http://ouo.io/api/63P7NKET?s=" . $link);
-        }
+        } */
 		
         if (stristr($host_check, 'share.vnn.vn') || stristr($host_check, '.vn'))
             $limit_host = "40 GB";

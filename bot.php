@@ -16,8 +16,8 @@ div {
 </html>
 <?php
 if (file_get_contents("time_clean.txt") <= (time() - 1 * 60)) {
-    @file_get_contents("http://botfree-botfree.7e14.starter-us-west-2.openshiftapps.com/xoa.php");
-    @file_get_contents("https://huyenthoai.pro/xoa.php");
+    @file_get_contents("http://botfree.huyenthoai.pro/xoa.php");
+    @file_get_contents("http://huyenthoai.pro/xoa.php");
     @file_put_contents("time_clean.txt", time());
     
 }
@@ -427,12 +427,13 @@ for ($i = 2; $i < 15; $i++) {
                                     //$iconf  = [img]http://i.imgur.com/8mqBD6E.png[/img]';
                                     $so_sv  = $foursvn[2] + 1;
                                     
-                                } /* 
+                                }  
                                 elseif (count(explode('up.4share.vn', $link))>1) {
                                 $entry1 = Get_Link_Host($link, $foursvn[0], $foursvn[1], $size_file, $total_file);
                                 // $icon = '[img]http://i.imgur.com/xJEW2Ny.png[/img]';
                                 $iconf = '[img]http://i.imgur.com/8mqBD6E.png[/img]';
-                                } */ elseif (count(explode('share.vnn.vn', $link)) > 1) {
+								$so_sv  = $foursvn[2] + 1;
+                                }  elseif (count(explode('share.vnn.vn', $link)) > 1) {
                                     
                                     
                                     $entry1 = Get_Link_Host($link, $svnn[0], $svnn[1], $size_file, $total_file);
