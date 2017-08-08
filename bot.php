@@ -317,6 +317,28 @@ for ($i = 2; $i < 15; $i++) {
                                 else {
                                     $kiemtra = false; //get cho member
                                 }
+                            }  elseif (strpos($link, 'uploaded.net') != 0) {
+                                
+                                $kiemtra = true; //get cho ca member
+                                if (strpos($filesize, 'kb') != 0) {
+                                    $kiemtra = true; //filesize kb always < gb
+                                } elseif (strpos($filesize, 'mb') != 0) {
+                                    $kiemtra = true; //filesize mb always < gb
+                                } elseif (strpos($filesize, 'gb') != 0) {
+                                    $size      = explode(".", $filesize);
+                                    $filesizes = trim($size[0]);
+                                    if ($filesize > 1) {
+                                        
+                                        $mess = '' . $iconf . '[den][b]@ ' . $name . ' [/b][/mau][center][b][color=green][big] Free Member chỉ có thể get link [den]Uploaded.Net[/mau] tối đa [vang]1 GB [/mau]| Vip ko giới hạn[/color][/big][br][color=purple] Link của bạn có size là [den](' . strtoupper($filesize) . ')  [/mau] [/color] [url=http://vnzleech.vn/mobilepay/] => Đăng Ký VIP tại đây để get tẹt ga. [/url][/b][/center]';
+                                        if ($bot_start == true)
+                                            post_cbox($mess);
+                                        $kiemtra = false;
+                                    }
+                                }
+                                
+                                else {
+                                    $kiemtra = false; //get cho member
+                                }
                             } elseif (strpos($link, 'filejoker.net') != 0 || strpos($link, 'littlebyte') != 0 || strpos($link, 'datafile') != 0 || strpos($link, 'alfafile.net') != 0 || strpos($link, 'fboom.me') != 0 || strpos($link, 'extmatrix.com') != 0 || strpos($link, 'depfile.com') != 0 || strpos($link, 'upstore.net') != 0 || strpos($link, 'subyshare.com') != 0 || strpos($link, 'rapidgator.net') != 0 || strpos($link, 'fboom.me') != 0 || strpos($link, 'keep2share.cc') != 0 || strpos($link, 'nitroflare.com') != 0 || strpos($link, 'letitbit.net') != 0 || strpos($link, 'turbobit.net') != 0 || strpos($link, 'novafile.com') != 0) {
                                 $mess = '' . $iconf . '[den][b]@ ' . $name . ' [/b][/mau][center][b][color=green]Xin lỗi, File Host [den]' . ucname($host_check) . '[/mau] chỉ dành cho thành viên Vip | [url=http://vnz-leech.com/donate]Hãy nâng cấp lên Vip[/url][/color][br][color=purple]Sorry, this File Host [den]' . ucname($host_check) . '[/mau] for Vip member only | [url=http://vnz-leech.com/donate]Let upgrade to Vip[/url][/color][/b][/center]';
                                 if ($bot_start == true)
